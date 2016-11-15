@@ -16,14 +16,64 @@
         android:orientation="vertical"
         android:paddingBottom="2dip" >
 
-                <TextView
+       <TextView
             android:id="@+id/text"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="10dp"
             android:textColor="#0A0A0A" 
             android:textSize="15sp"/>
-                
+        
+       <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="10dp"
+            android:orientation="horizontal" >
+
+            <EditText
+                android:id="@+id/textip"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:height="50dp"
+                android:hint="请填写对方IP"
+                android:textColor="#0A0A0A"
+                android:width="250dp" />
+
+            <Button
+                android:id="@+id/getphone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="获取IP" 
+                android:visibility="gone"/>
+
+            <Button
+                android:id="@+id/startsocket"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="3"
+                android:gravity="center"
+                android:text="测试IP" />
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_weight="1"
+                android:text="网络连接设置：两台手机同时连入一个wifi"
+                android:textColor="#0A0A0A"
+                android:textSize="15sp" />
+        </LinearLayout>
+        
         <TextView
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
@@ -87,7 +137,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:text="秒抢客户端"
+                    android:text="秒抢客户端\n(被控端)"
                     android:textColor="#0A0A0A" />
 
                 <RadioButton
@@ -100,7 +150,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:text="扫描客户端"
+                    android:text="扫描客户端\n(主控端)"
                     android:textColor="#0A0A0A" />
                 
                                 <RadioButton
@@ -113,7 +163,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="50dp"
                     android:layout_weight="1"
-                    android:text="透视客户端"
+                    android:text="透视客户端\n(单独使用)"
                     android:textColor="#0A0A0A" />
             </RadioGroup>
         </LinearLayout>
@@ -181,22 +231,6 @@
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="5dp" >
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignParentLeft="true"
-                android:layout_centerVertical="true"
-                android:layout_weight="1"
-                android:text="网络连接设置：两台手机同时连入一个wifi"
-                android:textColor="#0A0A0A"
-                android:textSize="15sp" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
             android:layout_height="60dp"
             android:layout_marginTop="0dp"
             android:orientation="horizontal" 
@@ -239,42 +273,6 @@
                     android:text="一台手机作为热点"
                     android:textColor="#0A0A0A" />
             </RadioGroup>
-        </LinearLayout>
-
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="50dp"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal" >
-
-            <EditText
-                android:id="@+id/textip"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:height="50dp"
-                android:hint="请填写对方IP"
-                android:textColor="#0A0A0A"
-                android:width="250dp" />
-
-            <Button
-                android:id="@+id/getphone"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:text="获取IP" 
-                android:visibility="gone"/>
-
-            <Button
-                android:id="@+id/startsocket"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_weight="3"
-                android:gravity="center"
-                android:text="测试IP" />
         </LinearLayout>
 
         <LinearLayout

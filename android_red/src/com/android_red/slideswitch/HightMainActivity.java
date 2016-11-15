@@ -17,14 +17,10 @@ import com.test.threads.ListenThread;
 import com.test.threads.SendDataThread;
 
 import android.app.Activity;
-import android.content.ActivityNotFoundException;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
 import android.content.ServiceConnection;
-import android.content.pm.ActivityInfo;
-import android.content.pm.PackageManager;
-import android.content.pm.ResolveInfo;
 import android.util.Log;
 import android.view.KeyEvent;
 import android.view.View;
@@ -100,7 +96,7 @@ public class HightMainActivity extends Activity implements
 		textviewP = (TextView) findViewById(R.id.textviewP);   //显示扫描间隔时间
 		mContext = getApplicationContext();
 		ll = (LinearLayout) findViewById(R.id.llLayout);  //双向滑动条
-		MyDoubleSeekBar<Integer> doubleSeekbar = new MyDoubleSeekBar<Integer>(
+		final MyDoubleSeekBar<Integer> doubleSeekbar = new MyDoubleSeekBar<Integer>(
 				0, 150, mContext);
 		doubleSeekbar.setSelectedMinValue(Const.jdt_min);
 		doubleSeekbar.setSelectedMaxValue(Const.jdt_max);
@@ -193,15 +189,24 @@ public class HightMainActivity extends Activity implements
 	
 		if(Const.qiang == 1){
 			rbmiao.setChecked(true);   //秒抢客户端
+			textip.setEnabled(false);
+			sends.setEnabled(false);
+			spinner.setEnabled(false);
+			doubleSeekbar.setEnabled(false);
 		}else if(Const.qiang == 2){
 			rbts.setChecked(true);     //扫描客户端
+			textip.setEnabled(true);
+			sends.setEnabled(true);
+			spinner.setEnabled(true);
+			doubleSeekbar.setEnabled(true);
 		}else{
 			rbxposed.setChecked(true); //透视客户端
+			textip.setEnabled(true);
+			sends.setEnabled(true);
+			spinner.setEnabled(true);
+			doubleSeekbar.setEnabled(true);
 		}
 		
-		if(Const.qiang == 1){
-			
-		}
 		rgshezhi2.setOnCheckedChangeListener(new OnCheckedChangeListener() {    //抢红包方式
 			@Override
 			public void onCheckedChanged(RadioGroup group, int checkedId) {
@@ -210,14 +215,26 @@ public class HightMainActivity extends Activity implements
 					Toast.makeText(getApplicationContext(), "秒抢客户端", 3000)
 							.show();				
 					Const.qiang = 1;
+					textip.setEnabled(false);
+					sends.setEnabled(false);
+					spinner.setEnabled(false);
+					doubleSeekbar.setEnabled(false);
 				} else if(checkedId == rbts.getId()){
 					Toast.makeText(getApplicationContext(), "扫描客户端", 3000)
 					.show();
 					Const.qiang = 2;
+					textip.setEnabled(true);
+					sends.setEnabled(true);
+					spinner.setEnabled(true);
+					doubleSeekbar.setEnabled(true);
 				} else{
 					Toast.makeText(getApplicationContext(), "透视客户端", 3000)
 					.show();
 					Const.qiang = 3;
+					textip.setEnabled(true);
+					sends.setEnabled(true);
+					spinner.setEnabled(true);
+					doubleSeekbar.setEnabled(true);
 				}
 			}
 		});
@@ -227,7 +244,17 @@ public class HightMainActivity extends Activity implements
 			@Override
 			public void onClick(View v) {
 				Const.ip = textip.getText().toString();
-
+				
+				Test test = new Test();
+//				if (Const.switch5 == false
+//						|| test.AA1("60.05", 4, "19", "20") == 0) { // Const.switch5==false
+//																	// 未开启排雷，直接抢
+//					// 抢红包
+//					System.out.println("开始抢红包");
+//				} else {
+//					System.out.println("此时不抢");
+//					// 此时不抢
+//				}
 				Intent intent = new Intent(HightMainActivity.this,
 						MainActivity.class);
 				startActivity(intent);
@@ -301,7 +328,6 @@ public class HightMainActivity extends Activity implements
 //				Const.cs = 1;
 				Const.mess = "abc";
 				if(textip.getText().toString().contains(".")){
-					Log.i("server", "发送测试消息");
 					new SendDataThread(textip.getText().toString()).start();
 				}else{
 					Toast.makeText(getApplicationContext(),
@@ -310,11 +336,10 @@ public class HightMainActivity extends Activity implements
 				}
 		});		
 		 //connection();//启动服务	
-//		 if(Const.ser == 1){ 
-//		new ListenThread(12345,handler).start();
-//		Log.i("server", "开启接收消息线程");
-//		Const.ser++;
-//		 }
+		 if(Const.ser == 1){ 
+		new ListenThread(12345,handler).start();
+		Const.ser++;
+		 }
 	}
 
 	class SpinnerSelectedListener implements OnItemSelectedListener {
@@ -479,32 +504,4 @@ public class HightMainActivity extends Activity implements
 		super.onDestroy();
 	}
 
-	
-//	public boolean onKeyDown(int keyCode, KeyEvent event) {    
-//        PackageManager pm = getPackageManager();    
-//        ResolveInfo homeInfo =   
-//            pm.resolveActivity(new Intent(Intent.ACTION_MAIN).addCategory(Intent.CATEGORY_HOME), 0);   
-//        if (keyCode == KeyEvent.KEYCODE_BACK) {  
-//            ActivityInfo ai = homeInfo.activityInfo;    
-//            Intent startIntent = new Intent(Intent.ACTION_MAIN);    
-//            startIntent.addCategory(Intent.CATEGORY_LAUNCHER);    
-//            startIntent.setComponent(new ComponentName(ai.packageName, ai.name));    
-//            startActivitySafely(startIntent);    
-//            return true;    
-//        } else    
-//            return super.onKeyDown(keyCode, event);    
-//    }  
-	
-    private void startActivitySafely(Intent intent) {    
-        intent.addFlags(Intent.FLAG_ACTIVITY_NEW_TASK);    
-        try {    
-            startActivity(intent);    
-        } catch (ActivityNotFoundException e) {    
-            Toast.makeText(this, "null",    
-                    Toast.LENGTH_SHORT).show();    
-        } catch (SecurityException e) {    
-            Toast.makeText(this, "null",    
-                    Toast.LENGTH_SHORT).show();     
-        }    
-    }  
 }

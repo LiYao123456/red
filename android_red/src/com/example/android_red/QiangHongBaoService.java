@@ -1,6 +1,5 @@
 package com.example.android_red;
 
-import java.io.IOException;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -11,9 +10,6 @@ import com.android_red.Thread.GetRedUtil;
 import com.android_red.Thread.MsgHandler;
 import com.android_red.intenter.Const;
 import com.android_red.intenter.Test;
-import com.android_red.slideswitch.HightMainActivity;
-import com.test.threads.ListenThread;
-import com.test.threads.SendDataThread;
 
 import android.accessibilityservice.AccessibilityService;
 import android.annotation.SuppressLint;
@@ -22,13 +18,11 @@ import android.app.KeyguardManager;
 import android.app.Notification;
 import android.app.PendingIntent;
 import android.content.Context;
-import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.graphics.Rect;
 import android.os.Build;
 import android.os.Handler;
-import android.os.Message;
 import android.os.PowerManager;
 import android.util.Log;
 import android.view.accessibility.AccessibilityEvent;
@@ -39,7 +33,6 @@ import android.widget.Toast;
 public class QiangHongBaoService extends AccessibilityService
 {
 
-	public static Thread thread,threadlis;
 	static final String TAG = "QiangHongBao";
 	SQLiteDatabase db;
 	/** 微信的包名 */
@@ -54,7 +47,7 @@ public class QiangHongBaoService extends AccessibilityService
 	private static CheckRedMessThread checkRedThread=null;
 	public static String putMess=null;
 	public static List<AccessibilityNodeInfo> qqList=null;
-	Handler handler1;
+
 	@Override
 	public void onAccessibilityEvent(AccessibilityEvent event)
 	{
@@ -109,84 +102,8 @@ public class QiangHongBaoService extends AccessibilityService
 	{
 		super.onServiceConnected();
 		Toast.makeText(this, "连接抢红包服务", Toast.LENGTH_SHORT).show();
-		handler1 = new Handler() {   //接收
-			@Override
-			public void handleMessage(Message msg) {
-				switch (msg.what) {
-				case 1:
-					Toast.makeText(QiangHongBaoService.this, msg.obj.toString(),
-							1000).show();
-					break;
-				case 2:
-					Toast.makeText(QiangHongBaoService.this, msg.obj.toString(),
-							1000).show();
-					break;
-				default:
-					break;
-				}
-			}
-
-		};
-		
-		if(Const.ser == 1){    //开启接收线程
-		threadlis = new ListenThread(Const.port,handler1);
-		threadlis.start();
-		Log.i("server", "开启接收消息线程");
-		Const.ser++;
-		 }
-		
-//		if(Const.qiang == 2){
-//			handler.postDelayed(runnable, 4000);//开启发送线程
-//		}
-
-		
-		//handler2.postDelayed(runnable2, 500);//测试ping
 	}
 	
-//	Handler handler=new Handler();   //开启发送线程
-//	Runnable runnable=new Runnable() {  
-//	    @Override  
-//	    public void run() {  
-//	        // TODO Auto-generated method stub  
-//	        //要做的事情  
-//	    	thread = new SendDataThread("192.168.0.102");
-//	    	thread.start();  //向秒抢段发送消息
-//	    	handler.postDelayed(this, 4000); 
-//	    }  
-//	};
-	
-//	Handler handler2=new Handler();  //测试ping
-//	Runnable runnable2=new Runnable() {  
-//	    @Override  
-//	    public void run() {  
-//	        // TODO Auto-generated method stub  
-//	        //要做的事情  
-//	    	Process p,p1;
-//	    	
-//			try {
-//				p = Runtime.getRuntime().exec("ping -c 1 -w 100 " +"192.168.0.102");
-//				//p1 = Runtime.getRuntime().exec("ping -c 1 -w 100 " +"192.168.0.102");
-//				int status = p.waitFor();
-//				//int status2 = p1.waitFor();
-//				Log.i("server", "ping自己结果:"+status);	
-//				//Log.i("server", "ping对方结果:"+status2);	
-//			} catch (IOException e1) {
-//				// TODO Auto-generated catch block
-//				Log.i("server", "ping出错1");	
-//				e1.printStackTrace();
-////				threadlis.interrupt();
-////				
-////				new ListenThread(Const.port,handler1).start();
-//				
-//			} catch (InterruptedException e) {
-//				Log.i("server", "ping出错2");	
-//				// TODO Auto-generated catch block
-//				e.printStackTrace();
-//			} 
-//			
-//	    	handler2.postDelayed(this, 500); 
-//	    }  
-//	};
 	
 	/** 打开通知栏消息 */
 	@TargetApi(Build.VERSION_CODES.JELLY_BEAN)
@@ -478,10 +395,5 @@ public class QiangHongBaoService extends AccessibilityService
 		}
 	}
 
-    @Override 
-    public int onStartCommand(Intent intent, int flags, int startId) { 
-        return START_STICKY;
-    }
-    
 	
 }

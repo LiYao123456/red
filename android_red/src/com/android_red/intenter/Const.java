@@ -1,7 +1,5 @@
 package com.android_red.intenter;
 
-import java.net.Socket;
-
 public class Const {
 	public static String WEB_PATH ="http://test.tx15.eccentertool.com:39011/cms/";
 	//http://ds.tx15.dianshangshikong.com:39003/Testimg/test?name=1
@@ -24,7 +22,4 @@ public class Const {
 	public static int  qiang= 1;               //抢红包方式    1：秒抢  2：扫描
 	public static boolean  miaoqiang= false;               //抢红包
 	public static String  mess= "";               //消息
-	public static String  socketip= "";               //判断socket
-	public static Socket socket=null;
-	public static int port=12348;     //端口
 }

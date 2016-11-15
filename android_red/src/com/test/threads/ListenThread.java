@@ -30,23 +30,23 @@ import android.util.Log;
 public class ListenThread extends Thread {
 	static final String TAG = "QiangHongBaoThread";
 	ServerSocket socket=null;
-	int count = 0;
 	public ListenThread(int port, Handler handler)
 	{
 		try {
-			//port=12345;
-			socket=new ServerSocket(Const.port);//监听本机的12345端口
+			port=12345;
+			socket=new ServerSocket(port);//监听本机的12345端口
 			this.handler=handler;
 		} catch (IOException e) {
 			Log.d("aaa", "ListenThread ServerSocket init() has exception");
 		}
+		
 	}
-	
-	Handler handler;
+	 Handler handler;
 	@Override
 	public void run() {
 		while (true) {
 			try {
+				
 				 Message msg=new Message();
 				 /*msg.what=2;
 				 msg.obj="ServerSocket 正在等待数据传输";
@@ -61,7 +61,6 @@ public class ListenThread extends Thread {
 				 msg.obj="ServerSocket 传输成功";
 				 this.handler.sendMessage(msg);*/
 				if (is!=null) {
-					count++;
 					 BufferedReader in=  new BufferedReader(new InputStreamReader(is,"UTF-8"));
 					 PrintWriter out = new PrintWriter(soc.getOutputStream());//输出信息
 					 String str="";
@@ -72,8 +71,6 @@ public class ListenThread extends Thread {
 						 new SendDataThread(ip).start();
 					 }else if(str.equals("123")){
 						 str=ip+"测试成功";
-					 }else if(str.equals("456")){
-						 str="收到消息"+count;
 					 }else{
 						 if(!str.equals("")){
 						 try {
