@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fdfdfd"
+    android:orientation="vertical"
+    android:paddingTop="2dip"
+    android:paddingLeft="2dip"
+    android:paddingRight="2dip" 
+    android:paddingBottom="2dip">
+
+        
+       <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" 
+        android:background="@drawable/myborder"
+        >
+
+       <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="#0A0A0A"
+            android:text="排雷功能设置"
+            android:textSize="15sp" />
+
+        <com.android_red.slideswitch.SlideSwitch
+            android:id="@+id/slideSwitch4"
+            android:layout_width="116dip"
+            android:layout_height="46dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" />
+    </RelativeLayout>
+       
+       
+       <TextView
+        android:layout_marginTop="50dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="#0A0A0A"
+            android:text="自动排雷"
+            android:textSize="15sp" />
+
+    
+        <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="#0A0A0A"
+            android:text="排雷格式设置"
+            android:textSize="15sp" />
+        
+        <Button
+            android:id="@+id/btn"
+            android:layout_width="116dip"
+            android:layout_height="46dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:textColor="#0A0A0A"
+            android:text="设置"/>
+
+    </RelativeLayout>
+    
+                <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="#0A0A0A"
+            android:text="雷值设置"
+            android:textSize="15sp" />
+        
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="116dip"
+            android:layout_height="46dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" 
+            android:textColor="#0A0A0A"
+            android:text="设置"/>
+
+    </RelativeLayout>
+    
+                        <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content" 
+        android:visibility="gone">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_centerVertical="true"
+            android:textColor="#0A0A0A"
+            android:text="雷值高级玩法设置"
+            android:textSize="15sp" />
+        
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="116dip"
+            android:layout_height="46dip"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true" 
+            android:textColor="#0A0A0A"
+            android:text="设置"/>
+
+    </RelativeLayout>
+    
+        <TextView
+        android:layout_marginTop="10dp"
+        android:id="@+id/textViewTip"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        
+        android:textColor="#0A0A0A"
+        android:text="说明：\n        在开启排雷设置前，请关闭【基本设置】中【开启指定群抢红包】选项" />
+        
+               <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/fanhui"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:height="40dp"
+                android:text="返回"
+                android:textColor="#0A0A0A"
+                android:textSize="25dp"
+                android:width="350dp" />
+        </LinearLayout>
+
+</LinearLayout>
+</LinearLayout>

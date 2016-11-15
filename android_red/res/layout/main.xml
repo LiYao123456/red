@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical" 
+>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" 
+        android:background="@drawable/myborder"
+        >
+        
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="150dp"
+        android:layout_gravity="top"
+        android:orientation="vertical" 
+        >
+
+     <EditText
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:background="#FF0000"
+         android:focusable="false"
+         android:height="80dp" />  
+         
+     <EditText
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:background="#ffffff"
+         android:focusable="false"
+         android:height="70dp" />
+    </LinearLayout>
+      
+    
+    <LinearLayout 
+        android:layout_width="fill_parent"
+        android:layout_height="200dp"
+        android:orientation="horizontal" >
+        
+        <Button
+        android:id="@+id/what"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:height="80dp"
+        android:layout_weight="1"
+        android:textColor="#FF0000"
+        android:text="使用\n帮助"
+        android:textSize="25dp"
+        
+         />
+        
+        <Button
+        android:id="@+id/vip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="开通\nVIP"
+        android:height="80dp"
+        android:layout_weight="1"
+        android:textColor="#FF0000"
+        android:textSize="25dp"
+        />
+        
+        <Button
+        android:id="@+id/best"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="高级\n设置" 
+        android:height="80dp"
+        android:layout_weight="1"
+        android:textColor="#FF0000"
+        android:textSize="25dp"
+        />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" 
+        android:layout_gravity="top">
+
+     <TextView
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:focusable="false"
+         android:textSize="25dp"
+         android:textColor="#0A0A0A"
+         android:text="        为了保证抢红包的正常运行，请阅读使用帮助对手机相关进行设置："
+         />
+    
+     
+     <TextView
+         android:layout_width="fill_parent"
+         android:layout_height="wrap_content"
+         android:focusable="false"
+         android:textSize="25dp"
+         android:textColor="#0A0A0A"
+         android:text="        请务必在【设置】-【更多设置】-【无障碍】-开启【欢乐抢红包】"/>
+
+    </LinearLayout>
+  </LinearLayout>
+</LinearLayout>

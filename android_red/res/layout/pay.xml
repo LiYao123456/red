@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bj"
+    android:orientation="vertical" 
+>
+   
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" 
+        android:background="@drawable/myborder"
+        >
+        
+    <LinearLayout 
+        android:layout_marginTop="200dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" 
+        android:layout_gravity="center"
+        android:gravity="center"
+        >
+        
+        <Button
+       android:layout_marginTop="0dp"
+        android:id="@+id/tyid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:height="40dp"
+        android:width="350dp"
+        android:textColor="#FF0000"
+        android:background="#FFFF00"
+        android:textSize="25dp"
+        android:text="购买授权"
+         />
+        <TextView
+         android:layout_marginTop="50dp"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:width="350dp"
+         android:focusable="false"
+         android:textSize="20dp"
+         android:text="请联系官方客服人员进行充值；\n请注意识别，谨防上当：\n微信客服:ly58xxxx88\n微信客服:wy1xxx0\nQQ客服:1xxx80\n"
+         android:textColor="#FFFFFF"
+         />
+
+
+
+
+        
+        <Button
+        android:layout_marginTop="55dp"
+        android:id="@+id/fanhui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:text="返回" 
+        android:height="40dp"
+        android:width="100dp"
+        android:textColor="#0A0A0A"
+        />
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>

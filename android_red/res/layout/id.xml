@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?><LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@drawable/bj"
+    android:orientation="vertical" 
+>
+   
+        <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" 
+        android:background="@drawable/myborder"
+        >
+        
+    <LinearLayout 
+        android:layout_marginTop="200dp"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:orientation="vertical" 
+        android:layout_gravity="center"
+        android:gravity="center"
+        >
+        
+        <Button
+       android:layout_marginTop="30dp"
+        android:id="@+id/tyid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:height="40dp"
+        android:width="350dp"
+        android:textColor="#FF0000"
+        android:background="#FFFF00"
+        android:textSize="25dp"
+        android:text="获取本机机器码"
+         />
+        <TextView
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:width="350dp"
+         android:focusable="false"
+         android:textSize="20dp"
+         android:text="本机机器码："
+         android:textColor="#FFFFFF"
+         />
+         <EditText
+         android:id="@+id/myuyid"
+         android:layout_marginTop="5dp"
+         android:height="100dp"
+         android:width="350dp"
+         android:hint="请点击获取本机机器码"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         />  
+
+        <LinearLayout 
+        android:layout_marginTop="10dp"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal" 
+        >
+        
+        <Button
+        android:id="@+id/copyuyid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:height="40dp"
+        android:width="40dp"
+        android:layout_weight="1"
+        android:textColor="#FF0000"
+        android:textSize="25dp"
+        android:text="复制机器码"
+        
+         />
+        
+        <Button
+        android:id="@+id/pay"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:text="购买授权"
+        android:height="40dp"
+        android:width="40dp"
+        android:layout_weight="1"
+        android:textColor="#FF0000"
+        />
+        </LinearLayout>
+        
+        <Button
+        android:layout_marginTop="10dp"
+        android:id="@+id/power"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:text="软件授权" 
+        android:height="40dp"
+        android:width="350dp"
+        android:textColor="#FF0000"
+        android:background="#FFFF00"
+        />
+        <Button
+        android:layout_marginTop="10dp"
+        android:id="@+id/fanhui"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="25dp"
+        android:text="返回" 
+        android:height="40dp"
+        android:width="350dp"
+        android:textColor="#FF0000"
+        android:background="#FFFF00"
+        />
+    </LinearLayout>
+</LinearLayout>
+</LinearLayout>

@@ -1,0 +1,615 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#fdfdfd"
+    android:orientation="vertical"
+    android:paddingTop="2dip"
+    android:paddingLeft="2dip"
+    android:paddingRight="2dip" 
+    android:paddingBottom="2dip">
+
+<ScrollView
+        android:id="@+id/scrollView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+      
+    <LinearLayout
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:background="@drawable/myborder"
+        android:orientation="vertical" >
+
+        <TextView
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="center"
+            android:text="雷值高级玩法设置"
+            android:textColor="#0A0A0A" />
+
+        <RelativeLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp" >
+
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="雷值高级玩法"
+                android:textColor="#0A0A0A"
+                android:textSize="15sp" />
+
+            <com.android_red.slideswitch.SlideSwitch
+                android:id="@+id/slideSwitch5"
+                android:layout_width="116dip"
+                android:layout_height="46dip"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="最大红包        ："
+                android:textColor="#0A0A0A"
+                android:textSize="15sp" 
+                android:layout_weight="4"/>
+
+            <RadioGroup
+                android:id="@+id/rgmax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="right"
+                android:orientation="horizontal" 
+                android:layout_weight="3">
+
+                <RadioButton
+                    android:id="@+id/maxstop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关闭"
+                    android:textColor="#0A0A0A" />
+
+                <RadioButton
+                    android:id="@+id/maxno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="不抢"
+                    android:textColor="#0A0A0A" />
+
+                <RadioButton
+                    android:id="@+id/maxqiang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="抢"
+                    android:textColor="#0A0A0A" />
+            </RadioGroup>
+        </LinearLayout>
+        
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="最小红包        ："
+                android:textColor="#0A0A0A"
+                android:textSize="15sp" 
+                android:layout_weight="4"
+                />
+
+            <RadioGroup
+                android:id="@+id/rgmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="right"
+                android:orientation="horizontal" 
+                android:layout_weight="3">
+
+                <RadioButton
+                    android:id="@+id/minstop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关闭"
+                    android:textColor="#0A0A0A" />
+
+                <RadioButton
+                    android:id="@+id/minno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="不抢"
+                    android:textColor="#0A0A0A" />
+
+                <RadioButton
+                    android:id="@+id/minqiang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="抢"
+                    android:textColor="#0A0A0A" />
+            </RadioGroup>
+        </LinearLayout>
+
+      <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="红包金额超过："
+                android:textColor="#0A0A0A"
+                android:textSize="15sp" 
+                android:layout_weight="2"/>
+            <EditText
+            android:id="@+id/etmonrycg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:textColor="#0A0A0A" 
+            android:layout_weight="2"           
+            />
+            <RadioGroup
+                android:id="@+id/rgmoneycg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="right"
+                android:orientation="horizontal" 
+                android:layout_weight="4">
+
+                <RadioButton
+                    android:id="@+id/moneycgstop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关闭"
+                    android:textColor="#0A0A0A" />
+
+                <RadioButton
+                    android:id="@+id/moneycgno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="不抢"
+                    android:textColor="#0A0A0A" />
+
+                <RadioButton
+                    android:id="@+id/moneycgqiang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="抢"
+                    android:textColor="#0A0A0A" />
+            </RadioGroup>
+        </LinearLayout>
+        
+      <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="红包金额低于："
+                android:textColor="#0A0A0A"
+                android:textSize="15sp" 
+                android:layout_weight="2"/>
+            <EditText
+            android:id="@+id/etmonrydy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#0A0A0A" 
+            android:layout_weight="2"           
+            />
+            <RadioGroup
+                android:id="@+id/rgmoneydy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="right"
+                android:orientation="horizontal" 
+                android:layout_weight="4">
+
+                <RadioButton
+                    android:id="@+id/moneydystop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关闭"
+                    android:textColor="#0A0A0A" />
+
+                <RadioButton
+                    android:id="@+id/moneydyno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="不抢"
+                    android:textColor="#0A0A0A" />
+
+                <RadioButton
+                    android:id="@+id/moneydyqiang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="抢"
+                    android:textColor="#0A0A0A" />
+            </RadioGroup>
+        </LinearLayout>
+        
+      <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="红包尾数最大："
+                android:textColor="#0A0A0A"
+                android:textSize="15sp" 
+                android:layout_weight="4"/>
+
+            <RadioGroup
+                android:id="@+id/rgwsmax"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="right"
+                android:orientation="horizontal" 
+                android:layout_weight="3">
+
+                <RadioButton
+                    android:id="@+id/wsmaxstop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关闭"
+                    android:textColor="#0A0A0A" />
+
+                <RadioButton
+                    android:id="@+id/wsmaxno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="不抢"
+                    android:textColor="#0A0A0A" />
+
+                <RadioButton
+                    android:id="@+id/wsmaxqiang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="抢"
+                    android:textColor="#0A0A0A" />
+            </RadioGroup>
+        </LinearLayout>
+        
+       <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="红包尾数最小："
+                android:textColor="#0A0A0A"
+                android:textSize="15sp" 
+                android:layout_weight="4"/>
+
+            <RadioGroup
+                android:id="@+id/rgwsmin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="right"
+                android:orientation="horizontal" 
+                android:layout_weight="3">
+
+                <RadioButton
+                    android:id="@+id/wsminstop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关闭"
+                    android:textColor="#0A0A0A" />
+
+                <RadioButton
+                    android:id="@+id/wsminno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="不抢"
+                    android:textColor="#0A0A0A" />
+
+                <RadioButton
+                    android:id="@+id/wsminqiang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="抢"
+                    android:textColor="#0A0A0A" />
+            </RadioGroup>
+        </LinearLayout>
+        
+      <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="红包尾数超过："
+                android:textColor="#0A0A0A"
+                android:textSize="15sp" 
+                android:layout_weight="2"/>
+            <EditText
+            android:id="@+id/etmonrywscg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#0A0A0A"    
+            android:layout_weight="2"        
+            />
+            <RadioGroup
+                android:id="@+id/rgmoneywscg"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="right"
+                android:orientation="horizontal" 
+                android:layout_weight="4">
+
+                <RadioButton
+                    android:id="@+id/moneywscgstop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关闭"
+                    android:textColor="#0A0A0A" />
+
+                <RadioButton
+                    android:id="@+id/moneywscgno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="不抢"
+                    android:textColor="#0A0A0A" />
+
+                <RadioButton
+                    android:id="@+id/moneywscgqiang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="抢"
+                    android:textColor="#0A0A0A" />
+            </RadioGroup>
+        </LinearLayout>
+        
+      <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp" >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:text="红包尾数低于："
+                android:textColor="#0A0A0A"
+                android:textSize="15sp" 
+                android:layout_weight="2"/>
+            <EditText
+            android:id="@+id/etmonrywsdy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="#0A0A0A" 
+            android:layout_weight="2"           
+            />
+            <RadioGroup
+                android:id="@+id/rgmoneywsdy"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:gravity="right"
+                android:orientation="horizontal" 
+                android:layout_weight="4">
+
+                <RadioButton
+                    android:id="@+id/moneywsdystop"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:checked="true" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关闭"
+                    android:textColor="#0A0A0A" />
+
+                <RadioButton
+                    android:id="@+id/moneywsdyno"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="不抢"
+                    android:textColor="#0A0A0A" />
+
+                <RadioButton
+                    android:id="@+id/moneywsdyqiang"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="抢"
+                    android:textColor="#0A0A0A" />
+            </RadioGroup>
+        </LinearLayout>
+
+        
+        
+        
+        <LinearLayout
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:gravity="center"
+            android:orientation="vertical" >
+
+            <Button
+                android:id="@+id/save"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:height="40dp"
+                android:text="保存"
+                android:textColor="#0A0A0A"
+                android:textSize="25dp"
+                android:width="350dp" />
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
+</LinearLayout>
